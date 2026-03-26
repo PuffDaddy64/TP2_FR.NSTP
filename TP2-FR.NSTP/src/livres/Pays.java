@@ -4,7 +4,8 @@ public class Pays {
 
     private String nomPays;
     private String codePays ;
-    private String CODE_PAYS_DEFAULT = "INC";
+    public static final String CODE_PAYS_DEFAULT = "INC";
+
 
     public Pays(String nomPays, String codePays) {
         this.nomPays = nomPays;
@@ -32,8 +33,12 @@ public class Pays {
         this.codePays= codePays;
     }
 
+
     private boolean validCodePays(String codePays){
         if(codePays.length() == 3){
+            for(char i: codePays.toCharArray()){
+                if(Character.isDigit(i))
+                    return false;}
 
             if(codePays.equals(codePays.toUpperCase()))
                 return true;
@@ -44,5 +49,11 @@ public class Pays {
             return false;
     }
 
-
+    @Override
+    public String toString() {
+        return "Pays{" +
+                "nomPays='" + nomPays + '\'' +
+                ", codePays='" + codePays + '\'' +
+                '}';
+    }
 }

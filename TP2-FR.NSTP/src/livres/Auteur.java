@@ -12,19 +12,20 @@ import java.util.Objects;
 public class Auteur {
 
     public static final String INCONNU = "Inconnu";
+    public static final Pays BASE = new Pays(INCONNU, Pays.CODE_PAYS_DEFAULT);
 
     private String prenom = INCONNU;
     private String nom = INCONNU;
-    private String paysOrigine = INCONNU;
+    private Pays paysOrigine;
 
-    public Auteur(String prenom, String nom, String paysOrigine) {
+    public Auteur(String prenom, String nom, Pays paysOrigine) {
         setPrenom(prenom);
         setNom(nom);
         setPaysOrigine(paysOrigine);
     }
 
     public Auteur() {
-        this(INCONNU, INCONNU, INCONNU);
+        this(INCONNU, INCONNU, BASE);
     }
 
     public String getPrenom() {
@@ -43,11 +44,11 @@ public class Auteur {
         this.nom = nom;
     }
 
-    public String getPaysOrigine() {
+    public Pays getPaysOrigine() {
         return paysOrigine;
     }
 
-    private void setPaysOrigine(String paysOrigine) {
+    private void setPaysOrigine(Pays paysOrigine) {
         this.paysOrigine = paysOrigine;
     }
 

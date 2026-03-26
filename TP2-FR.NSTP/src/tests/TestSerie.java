@@ -3,6 +3,7 @@ package tests;
 
 import livres.Auteur;
 import livres.Ouvrage;
+import livres.Pays;
 import livres.Serie;
 
 import java.time.LocalDate;
@@ -15,9 +16,10 @@ public class TestSerie
 
 
     public static void main(String[] args) {
-
-        Auteur albertine = new Auteur("Albertine", "Tremblay", "Canada");
-        Auteur john = new Auteur("John", "Smith", "Etats-Unis");
+        Pays roumanie = new Pays("Roumanie", "ROM");
+        Pays allemagne = new Pays("Allemagne", "ALG");
+        Auteur albertine = new Auteur("Albertine", "Tremblay", roumanie);
+        Auteur john = new Auteur("John", "Smith", allemagne);
 
         List<Ouvrage> ouvrageImpaire = new ArrayList<>();
         List<Ouvrage> ouvragePair = new ArrayList<>();
