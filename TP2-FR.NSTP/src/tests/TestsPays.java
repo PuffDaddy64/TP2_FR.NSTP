@@ -18,7 +18,7 @@ public class TestsPays
         Pays paysTest1 = new Pays("Kazakhstan", "316");
 
         paysTest1.setCodePays("CCC");
-        System.out.print("Ici j'ai se tune erreu rle message d'errue r est supposé être :\n Le code de pays n'est pas valide, Pattern acepter 'ABC' et non 'abc'\nVoici le message d'erreur :  ");
+        System.out.print("Ici j'ai mis une erreur sur le message d'erreur est supposé être :\n Le code de pays n'est pas valide, Pattern acepter 'ABC' et non 'abc'\nVoici le message d'erreur :  ");
         paysTest0.setCodePays("G2B");
 
 
