@@ -29,7 +29,6 @@ public class Pays {
         if (!validCodePays(codePays))  {
             System.out.println("Le code de pays n'est pas valide, Pattern acepter 'ABC' et non 'abc' ");
         }
-
         this.codePays= codePays;
     }
 
