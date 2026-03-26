@@ -1,3 +1,5 @@
+package livres;
+
 public class Pays {
 
     private String nomPays;
@@ -24,7 +26,6 @@ public class Pays {
     public void setCodePays(String codePays){
         assert codePays == null : "veuiller entrer un code de pays non-null";
         assert !validCodePays(codePays) : "Le code de pays n'est pas valide, Pattern acepter 'ABC' et non 'abc' ";
-
         this.codePays= codePays;
     }
 
