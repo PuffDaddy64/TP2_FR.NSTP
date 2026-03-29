@@ -11,11 +11,6 @@ import java.util.Objects;
  */
 
 public class Ouvrage {
-
-    public enum Format {
-        PAPIER, AUDIO, VIDEO
-    }
-
     public static final String TITRE_INCONNU = "Titre Inconnu";
     public static final int NOMBRE_EXEMPLAIRE_DEFAUT = 0;
     public static final Format TYPE_DEFAULT = Format.PAPIER;
@@ -27,11 +22,10 @@ public class Ouvrage {
     private int nombreExemplaires = NOMBRE_EXEMPLAIRE_DEFAUT;
     private Format type = TYPE_DEFAULT;
 
-    public Ouvrage(String titre, Auteur auteur, Format type,
+    public Ouvrage(String titre, Auteur auteur,
                    LocalDate date, int nombreExemplaires) {
         setTitre(titre);
         setAuteur(auteur);
-        this.type = type;
         setDate(date);
         setNombreExemplaires(nombreExemplaires);
     }
@@ -87,10 +81,6 @@ public class Ouvrage {
         }
     }
 
-    public Format getType() {
-        return type;
-    }
-
     public String identificateur() {
         String id = titre.substring(0, 2) + "_" +
                 auteur.getNom().substring(0, 1) +
@@ -105,7 +95,7 @@ public class Ouvrage {
         String affichageDAte = date != null ? date.toString() : "Non Disponible";
 
         return "[" + identificateur() + "] " + titre + " (" + auteur.getPrenom() + " "
-                + auteur.getNom() + ") - " + type + " - disponible le " + affichageDAte + " (" + nombreExemplaires + " ex.)";
+                + auteur.getNom() + ") - " +  " - disponible le " + affichageDAte + " (" + nombreExemplaires + " ex.)";
     }
 
     public void acheter(int nombre) {
