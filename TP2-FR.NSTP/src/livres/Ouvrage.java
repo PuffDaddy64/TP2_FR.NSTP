@@ -13,7 +13,6 @@ import java.util.Objects;
 public class Ouvrage {
     public static final String TITRE_INCONNU = "Titre Inconnu";
     public static final int NOMBRE_EXEMPLAIRE_DEFAUT = 0;
-    public static final Format TYPE_DEFAULT = Format.PAPIER;
     public static final int LONGUEUR_TITRE_MIN = 3;
 
     private String titre = TITRE_INCONNU;
@@ -28,7 +27,7 @@ public class Ouvrage {
         setDate(date);
         setNombreExemplaires(nombreExemplaires);
     }
-    public Ouvrage(String titre, Auteur auteur,Format type) {
+    public Ouvrage(String titre, Auteur auteur) {
         this(titre, auteur, type, null, NOMBRE_EXEMPLAIRE_DEFAUT);
     }
 
