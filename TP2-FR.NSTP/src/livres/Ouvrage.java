@@ -20,7 +20,6 @@ public class Ouvrage {
     private Auteur auteur = new Auteur();
     private LocalDate date;
     private int nombreExemplaires = NOMBRE_EXEMPLAIRE_DEFAUT;
-    private Format type = TYPE_DEFAULT;
 
     public Ouvrage(String titre, Auteur auteur,
                    LocalDate date, int nombreExemplaires) {
